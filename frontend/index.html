@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro de Clientes</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+
+<body>
+
+    <nav>
+        <div>
+
+            <a href="/">🏨 Hotel Caribe Azul</a>
+
+            <button type="button">
+                <span></span>
+            </button>
+
+            <div id="navbarNav">
+                <ul>
+                    <li>
+                        <a href="/">🏠 Cadastro</a>
+                    </li>
+                    <li>
+                        <a href="/consulta">🔍 Consultar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="assets/images/banner1.png" alt="Banner 1" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="assets/images/banner2.png" alt="Banner 2" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="assets/images/banner3.png" alt="Banner 3" class="d-block w-100">
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+    <form id="formCadastro">
+        <div>
+            <div>
+                <label for="nome"> Nome:</label>
+                <input type="text" name="nome" required>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="cpf"> CPF:</label>
+                <input type="text" name="cpf" required>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <label for="email"> Email:</label>
+                <input type="email" name="email" required>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="telefone"> Telefone:</label>
+                <input type="text" name="telefone" required>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <label for="endereco"> Endereço:</label>
+                <input type="text" name="endereco" required>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <label for="observacao"> Observação:</label>
+                <textarea type="text" name="observacao" required> </textarea>
+            </div>
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <div id="mensagem"></div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

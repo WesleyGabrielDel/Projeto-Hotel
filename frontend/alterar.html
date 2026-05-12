@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!-- =============================================================================
+🏨 HOTEL CARIBE AZUL - PÁGINA DE ALTERAÇÃO DE DADOS
+💡 Objetivo: permitir editar informações de um cliente já cadastrado.
+📘 O sistema busca os dados via ID, preenche o formulário automaticamente
+    e envia as alterações ao backend Flask, que atualiza o Excel (.xlsx).
+🎓 Didático: feito para alunos compreenderem a integração HTML + JS + Flask.
+============================================================================= -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Dados do Cliente14/04</title>
+
+</head>
+
+<body>
+
+    <!-- =============================================================================
+    🔹 MENU SUPERIOR (NAVBAR)
+    -----------------------------------------------------------------------------
+    💡 Permite navegar entre as rotas Flask:
+       ➜ "/" (Cadastro)
+       ➜ "/consulta" (Consulta)
+    ============================================================================= -->
+    <nav>
+        <div>
+            <a href="/">🏨 Hotel Caribe Azul</a>
+
+            <!-- 📱 Botão do menu para telas pequenas -->
+            <button type="button">
+                <span></span>
+            </button>
+
+            <!-- 🧭 Itens do menu -->
+            <div>
+                <ul>
+                    <li>
+                        <a href="/">🏠 Cadastro</a>
+                    </li>
+                    <li>
+                        <a href="/consulta">🔍 Consultar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =============================================================================
+    🧾 FORMULÁRIO DE ALTERAÇÃO
+    -----------------------------------------------------------------------------
+    💡 O formulário será automaticamente preenchido pelo JS (main.js),
+       que obtém os dados do cliente pelo ID na URL:
+       ➜ /alterar?id=3
+    ⚙️ Ao clicar em “Salvar Alterações”, o JS envia os novos dados
+       via POST para a rota Flask:
+       ➜ /api/atualizar/<id>
+    ============================================================================= -->
+    <div>
+        <h2>✏️ Alterar Dados do Cliente</h2>
+
+        <!-- Formulário principal -->
+        <form id="formAlterar">
+            <!-- Campo oculto: ID do cliente -->
+            <input type="hidden" id="clienteId">
+
+            <div>
+                <!-- Campo Nome -->
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+                </div>
+
+                <!-- Campo CPF -->
+                <div>
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" required>
+                </div>
+
+                <!-- Campo Email -->
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <!-- Campo Telefone -->
+                <div>
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" required>
+                </div>
+
+                <!-- Campo Endereço -->
+                <div>
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" required>
+                </div>
+
+                <!-- Campo Observações -->
+                <div>
+                    <label for="observacoes">Observações:</label>
+                    <textarea id="observacoes"></textarea>
+                </div>
+            </div>
+
+            <!-- Botão de Salvar -->
+            <div>
+                <button type="submit">💾 Salvar Alterações</button>
+            </div>
+        </form>
+
+        <!-- Mensagem de confirmação (sucesso ou erro) -->
+        <div id="mensagem"></div>
+    </div>
+
+    <!-- =============================================================================
+    ⚙️ SCRIPTS JAVASCRIPT
+    -----------------------------------------------------------------------------
+    💡 O main.js controla:
+       - O preenchimento automático dos campos ao abrir a página
+       - O envio das alterações ao servidor Flask
+       - As mensagens de sucesso/erro
+    ============================================================================= -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
