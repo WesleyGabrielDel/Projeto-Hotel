@@ -7,30 +7,31 @@
 
     <title>Cadastro de Clientes</title>
 
+    <link rel="stylesheet" href="/static/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="assets/js/main.js" defer></script>
 
 </head>
 
 <body>
 
-    <nav>
-        <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
+        <div class="container-fluid">
 
-            <a href="/">🏨 Hotel Caribe Azul</a>
+            <a href="/" class="navbar-brand fw-bold text-white">🏨 Hotel Caribe Azul</a>
 
-            <button type="button">
-                <span></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div id="navbarNav">
-                <ul>
-                    <li>
-                        <a href="/">🏠 Cadastro</a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link active text-white">🏠 Cadastro</a>
                     </li>
                     <li>
-                        <a href="/consulta">🔍 Consultar</a>
+                        <a href="/consulta" class="nav-link text-white">🔍 Consultar</a>
                     </li>
                 </ul>
             </div>
@@ -59,52 +60,58 @@
         </div>
     </header>
 
-    <form id="formCadastro">
-        <div>
-            <div>
-                <label for="nome"> Nome:</label>
-                <input type="text" name="nome" required>
-            </div>
-        </div>
-        <div>
-            <div>
-                <label for="cpf"> CPF:</label>
-                <input type="text" name="cpf" required>
-            </div>
-        </div>
+    <main class="container mt-4">
 
-        <div>
-            <div>
-                <label for="email"> Email:</label>
-                <input type="email" name="email" required>
-            </div>
-        </div>
-        <div>
-            <div>
-                <label for="telefone"> Telefone:</label>
-                <input type="text" name="telefone" required>
-            </div>
-        </div>
+        <h2 class="text-center mb-4">Cadastro de Clientes</h2>
 
-        <div>
+        <form id="formCadastro" class="p-3 rounded bg-light shadow">
             <div>
-                <label for="endereco"> Endereço:</label>
-                <input type="text" name="endereco" required>
+                <div>
+                    <label for="nome"> Nome:</label>
+                    <input type="text" name="nome" required>
+                </div>
             </div>
-        </div>
+            <div>
+                <div>
+                    <label for="cpf"> CPF:</label>
+                    <input type="text" name="cpf" required>
+                </div>
+            </div>
 
-        <div>
             <div>
-                <label for="observacao"> Observação:</label>
-                <textarea type="text" name="observacao" required> </textarea>
+                <div>
+                    <label for="email"> Email:</label>
+                    <input type="email" name="email" required>
+                </div>
             </div>
-        </div>
-        <button type="submit">Cadastrar</button>
-    </form>
+            <div>
+                <div>
+                    <label for="telefone"> Telefone:</label>
+                    <input type="text" name="telefone" required>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <label for="endereco"> Endereço:</label>
+                    <input type="text" name="endereco" required>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <label for="observacao"> Observação:</label>
+                    <textarea type="text" name="observacao" required> </textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn-primary">Cadastrar</button>
+        </form>
+    </main>
 
     <div id="mensagem"></div>
-
-    <script src="assets/js/main.js"></script>
+    <footer>
+        <p>Sistema de Cadastro | Desenvolvido para fins didáticos</p>
+    </footer>
 </body>
 
 </html>

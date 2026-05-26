@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <td>${cli.CPF}</td>
                     <td>${cli.Email}</td>
                     <td>${cli.Telefone}</td>
-                    <td>${cli.observacoes}</td>
+                    <td>${cli.Observações}</td>
                     <td><a href="/alterar?id=${cli.ID}" class="btn btn-sm btn-warning">Editar</a></td>
                 </tr>`;
                 tabela.innerHTML += row;
@@ -129,3 +129,47 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 })
+
+const canvas = document.createElement('canvas');
+canvas.id = 'snowCanvas';
+document.body.appendChild(canvas);
+
+const ctx = canvas.getContext('2d');
+
+let snowflakes = [];
+let mouseX = 0;
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+resizeCanvas();
+
+window.addEventListener("resize", resizeCanvas);
+window.addEventListener("mousemove", e => mouseX = e.clientX);
+
+
+function createSnowFlakes(count){
+    for(let i = 0; i < count; i++){
+        snowflakes.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            r: Math.random() * 4 + 1,
+            d: Math.random() + 1
+        });
+    }
+}
+
+createSnowFlakes(40);
+
+function drawSnow() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "white";
+    ctx.beginPath();
+
+    for(let flake of snowflakes){
+        
+    }
+}
