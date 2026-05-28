@@ -170,6 +170,24 @@ function drawSnow() {
     ctx.beginPath();
 
     for(let flake of snowflakes){
-        
+        ctx.moveTo(flake.x, flake.y);
+        ctx.arc(flake.x, flake.y, flake.r, 0, Math.PI * 2);
     }
+
+    ctx.fill();
+
+    for(let flake of snowflakes){
+        flake.y += Math.pow(flake.d, 2) + 1;
+        flake.x += Math.sin(mouseX / 100) * 0.5;
+
+        if(flake.y > canvas.height) {
+            flake.y = 0;
+            flake.x = Math.random() * canvas.width;
+        }
+
+    }
+
+    requestAnimationFrame(drawSnow);
 }
+
+drawSnow();

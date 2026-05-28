@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, #5654ad, #0077b6);
+    background: linear-gradient(135deg, #0f2b45, #0877a3);
     color: #000;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100vh;
@@ -15,14 +15,31 @@ form {
     border-radius: 15px;
 }
 
-footer  {
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main, .container {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: #000;
     color: #fff;
+    padding: 1rem;
 }
+
 
 .btn-primary {
     background-color: #0077b6;
@@ -74,3 +91,6 @@ footer  {
 }
 
 
+.form-control {
+    width: 200%;
+}

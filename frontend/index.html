@@ -65,50 +65,46 @@
         <h2 class="text-center mb-4">Cadastro de Clientes</h2>
 
         <form id="formCadastro" class="p-3 rounded bg-light shadow">
-            <div>
-                <div>
-                    <label for="nome"> Nome:</label>
-                    <input type="text" name="nome" required>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="nome" class="form-label"> Nome:</label>
+                    <input type="text" name="nome" class="form-control" required>
                 </div>
-            </div>
-            <div>
-                <div>
-                    <label for="cpf"> CPF:</label>
-                    <input type="text" name="cpf" required>
-                </div>
-            </div>
 
-            <div>
-                <div>
-                    <label for="email"> Email:</label>
-                    <input type="email" name="email" required>
+                <div class="col-md-6">
+                    <label for="cpf" class="form-label"> CPF:</label>
+                    <input type="text" name="cpf" class="form-control" required>
                 </div>
-            </div>
-            <div>
-                <div>
-                    <label for="telefone"> Telefone:</label>
-                    <input type="text" name="telefone" required>
-                </div>
-            </div>
 
-            <div>
-                <div>
-                    <label for="endereco"> Endereço:</label>
-                    <input type="text" name="endereco" required>
+                <div class="col-md-6">
+                    <label for="email" class="form-label"> Email:</label>
+                    <input type="email" name="email" class="form-control" required>
                 </div>
-            </div>
 
-            <div>
-                <div>
-                    <label for="observacao"> Observação:</label>
-                    <textarea type="text" name="observacao" required> </textarea>
+                <div class="col-md-6">
+                    <label for="telefone" class="form-label"> Telefone:</label>
+                    <input type="text" name="telefone" class="form-control" required>
                 </div>
+
+                <div class="col-12">
+                    <label for="endereco" class="form-label"> Endereço:</label>
+                    <input type="text" name="endereco" class="form-control" required>
+                </div>
+
+                <div class="col-12">
+                    <label for="observacao" class="form-label"> Observação:</label>
+                    <textarea type="text" name="observacao" class="form-control" rows="2" required> </textarea>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class=" btn btn-primary px-5">Cadastrar</button>
+                </div>
+
             </div>
-            <button type="submit" class="btn-primary">Cadastrar</button>
         </form>
     </main>
 
-    <div id="mensagem"></div>
+    <div id="mensagem" class="mt-3 text-center fw-bold"></div>
     <footer>
         <p>Sistema de Cadastro | Desenvolvido para fins didáticos</p>
     </footer>
